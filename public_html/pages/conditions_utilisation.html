@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions d'Utilisation - Profil SIO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --emerald-500: #10b981;
+            --emerald-400: #34d399;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --glass-bg: rgba(22, 27, 34, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: #0d1117;
+            color: #e6edf3;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .emerald-gradient {
+            background: linear-gradient(135deg, var(--emerald-400) 0%, var(--emerald-500) 100%);
+        }
+
+        .section-icon {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            opacity: 0.2;
+            transition: all 0.3s ease;
+        }
+
+        .glass:hover .section-icon {
+            opacity: 0.4;
+            transform: scale(1.05);
+        }
+
+        .access-badge {
+            display: inline-block;
+            border: 1px solid var(--emerald-500);
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--emerald-400);
+            background-color: rgba(16, 185, 129, 0.1);
+        }
+
+        .data-card {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .data-card:hover {
+            border-left-color: var(--emerald-500);
+            background-color: rgba(16, 185, 129, 0.05);
+        }
+    </style>
+</head>
+<body class="py-12">
+    <!-- SECTION PRINCIPALE -->
+    <article id="cgu-recrutement" class="max-w-6xl mx-auto py-12 px-6">
+        <!-- EN-TÊTE AMÉLIORÉE -->
+        <div class="text-center mb-16">
+            <div class="flex justify-center mb-4">
+                <span class="access-badge">
+                    <i class="fa-solid fa-lock-keyhole mr-1"></i> Protocole de Sécurité & RGPD
+                </span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">
+                Conditions d'<span class="text-emerald-400">Utilisation</span> & Accès Privilégié
+            </h1>
+            <p class="text-slate-400 max-w-3xl mx-auto text-lg">
+                En accédant à ce contenu, vous reconnaissez pénétrer dans un environnement contenant des Données à Caractère Personnel (DCP) protégées par la directive CNIL de mai 2025.
+            </p>
+        </div>
+
+        <!-- CONTENU PRINCIPAL -->
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- BLOC 1 : ACCÈS AUTHENTIFIÉ -->
+            <div class="glass p-8 relative">
+                <h2 class="text-xl font-bold text-emerald-400 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-user-shield"></i> 1. Accès Authentifié
+                </h2>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    L'accès à ce portfolio est restreint. L'authentification initiale fait office de validation. En tant que visiteur, vous reconnaissez que cet accès vous est accordé à des fins strictement <strong>professionnelles et de recrutement</strong>.
+                </p>
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check-circle text-emerald-500 mt-1"></i>
+                        <span>Accès limité aux chargés de recrutement, managers et tuteurs autorisés.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-ban text-red-500 mt-1"></i>
+                        <span>Interdiction formelle de diffuser l'accès à des tiers non-autorisés.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- BLOC 2 : DONNÉES COLLECTÉES -->
+            <div class="glass p-8 border-l border-emerald-500">
+                <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-database"></i> 2. Données Collectées (DCP)
+                </h2>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Conformément à l'<strong>Unité 1 du MOOC CNIL</strong>, les données présentes sur ce profil sont :
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="data-card bg-slate-800/50 p-4">
+                        <span class="block text-emerald-400 font-bold text-xs uppercase">Pertinence</span>
+                        <span class="text-sm text-slate-400">Lien direct avec le recrutement.</span>
+                    </div>
+                    <div class="data-card bg-slate-800/50 p-4">
+                        <span class="block text-emerald-400 font-bold text-xs uppercase">Finalité</span>
+                        <span class="text-sm text-slate-400">Évaluer les aptitudes et le potentiel du candidat.</span>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-500">
+                    <i class="fa-solid fa-circle-info mr-1"></i> Seules les informations nécessaires à l'évaluation des compétences sont exposées.
+                </p>
+            </div>
+
+            <!-- BLOC 3 : SÉCURITÉ -->
+            <div class="glass p-8 col-span-1 lg:col-span-2">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/3">
+                        <h2 class="text-2xl font-black text-white uppercase leading-none mb-2">Sécurité <br><span class="text-emerald-500">Des Données</span></h2>
+                        <p class="text-xs text-slate-500">Référentiel : Guide du recrutement CNIL 2025</p>
+                    </div>
+                    <div class="md:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="p-4 bg-emerald-500/5 rounded-xl border border-emerald-500/20">
+                            <i class="fa-solid fa-clock-rotate-left text-emerald-500 mb-2 text-xl"></i>
+                            <h3 class="text-xs font-bold text-white uppercase mb-1">Conservation</h3>
+                            <p class="text-sm text-slate-400">Limité à la période de recherche d'alternance/stage.</p>
+                        </div>
+                        <div class="p-4 bg-emerald-500/5 rounded-xl border border-emerald-500/20">
+                            <i class="fa-solid fa-eye-slash text-emerald-500 mb-2 text-xl"></i>
+                            <h3 class="text-xs font-bold text-white uppercase mb-1">Accès Restreint</h3>
+                            <p class="text-sm text-slate-400">Protocole sécurisé obligatoire.</p>
+                        </div>
+                        <div class="p-4 bg-emerald-500/5 rounded-xl border border-emerald-500/20">
+                            <i class="fa-solid fa-hand-holding-hand text-emerald-500 mb-2 text-xl"></i>
+                            <h3 class="text-xs font-bold text-white uppercase mb-1">Droits</h3>
+                            <p class="text-sm text-slate-400">Accès, rectification, suppression sur demande.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="mt-16 text-center">
+            <div class="border-t border-slate-700/50 pt-8">
+                <p class="text-slate-500 text-xs uppercase tracking-widest font-semibold">
+                    Document conforme au <a href="/Portfolio/public_html/components/CNIL_Travail_et_Données_Fiches_Synthèse_1_VF_05_06_2025.pdf" class="text-slate-400 underline decoration-emerald-500/50" title="Ouvrir le MOOC CNIL - Unité 1">MOOC CNIL - Unité 1 (05/2025)</a>
+                </p>
+                <div class="mt-6 flex justify-center gap-4">
+                    <a href="/index.html" class="px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold rounded-full transition-all border border-slate-700">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Retour au Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+</body>
+</html>

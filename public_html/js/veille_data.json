@@ -1,0 +1,99 @@
+    <!-- SCRIPT DE GÉNÉRATION DYNAMIQUE -->
+        <!-- SCRIPT DE GÉNÉRATION DYNAMIQUE -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const articlesVeille = [
+                {
+                    id: 1,
+                    themeColor: "purple",
+                    icon: "fa-heart-pulse",
+                    title: "Névrose Numérique & Parasocial",
+                    date: "14.03.2024", // <-- Nouvelle donnée
+                    bullets: [
+                        { subtitle: "Relations parasociales", text: "Des millions d'utilisateurs projettent une relation affective sur des chatbots — confondant le confort statistique d'un LLM avec une présence humaine authentique." },
+                        { subtitle: "Atrophie sociale", text: "L'IA valide en permanence, ne juge pas, ne fatigue pas — ce que les humains ne peuvent pas offrir. La relation réelle devient inconfortable par comparaison." },
+                        { subtitle: "Boucle addictive", text: "Dopamine à la réponse immédiate, frustration face à l'humain imparfait. Le cerveau est conditionné à préférer le simulacre au réel." }
+                    ],
+                    sourceName: "ArXiv — IA & relations affectives",
+                    sourceUrl: "https://arxiv.org/search/cs?query=parasocial+AI", // <-- Véritable URL
+                    imgUrl: "" 
+                },
+                {
+                    id: 2,
+                    themeColor: "red",
+                    icon: "fa-brain",
+                    title: "La Chute du QI Fonctionnel",
+                    date: "02.11.2023", // <-- Nouvelle donnée
+                    bullets: [
+                        { subtitle: "Effet Flynn inversé", text: "Après des décennies de hausse du QI moyen, les pays développés observent une tendance inverse depuis les années 2010 — corrélée à l'essor du smartphone et des algorithmes." },
+                        { subtitle: "Raisonnement délégué", text: "Ce n'est pas que les gens sont moins intelligents — c'est qu'ils n'exercent plus leur intelligence. Un muscle non sollicité s'atrophie." },
+                        { subtitle: "Axiomes LLM", text: "Les réponses statistiquement probables des IA deviennent des vérités acceptées sans friction. La pensée critique est remplacée par la validation algorithmique." }
+                    ],
+                    sourceName: "MDPI — Cognitive decline study",
+                    sourceUrl: "https://www.mdpi.com/search?q=cognitive+decline+smartphone", // <-- Véritable URL
+                    imgUrl: ""
+                },
+                {
+                    id: 3,
+                    themeColor: "yellow",
+                    icon: "fa-infinity",
+                    title: "Paralysie par Sur-information",
+                    date: "28.01.2024", // <-- Nouvelle donnée
+                    bullets: [
+                        { subtitle: "Analysis Paralysis", text: "Face à un volume infini d'information contradictoire, le cerveau abandonne la décision. L'abondance de choix produit l'immobilisme — pas la liberté." },
+                        { subtitle: "Scroll infini", text: "Les plateformes ont supprimé toute friction — pas de fin de page, pas d'effort. L'attention devient une ressource extractible, pillée en temps réel." },
+                        { subtitle: "L'illusion de savoir", text: "Avoir vu une vidéo sur un sujet donne l'impression de le maîtriser. La connaissance de surface colonise l'espace de la vraie expertise." }
+                    ],
+                    sourceName: "The Conversation — Info Overload",
+                    sourceUrl: "https://theconversation.com/fr/search?q=surcharge+informationnelle", // <-- Véritable URL
+                    imgUrl: ""
+                }
+            ];
+
+            const colors = {
+                purple: { bg: 'bg-purple-500/10', text: 'text-purple-400', icon: 'text-purple-500' },
+                red: { bg: 'bg-red-500/10', text: 'text-red-400', icon: 'text-red-500' },
+                yellow: { bg: 'bg-yellow-500/10', text: 'text-yellow-400', icon: 'text-yellow-500' }
+            };
+
+            const grid = document.getElementById('veille-passive-grid');
+
+            articlesVeille.forEach(article => {
+                const theme = colors[article.themeColor] || colors.purple;
+
+                const bulletsHTML = article.bullets.map(bullet => `
+                <li class="flex items-start gap-3">
+                    <span class="${theme.icon} font-bold mt-0.5"><i class="fa-solid fa-chevron-right text-xs"></i></span>
+                    <span class="text-slate-300 text-sm leading-relaxed">
+                        <strong class="text-white">${bullet.subtitle} :</strong> ${bullet.text}
+                    </span>
+                </li>
+            `).join('');
+
+                const cardHTML = `
+                <div class="bg-[#121820] border border-slate-800 p-8 rounded-xl flex flex-col h-full hover:border-slate-700 transition-colors">
+                    
+                    <!-- EN-TÊTE : Ajout de la date ici, poussée à droite par ml-auto -->
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-12 h-12 shrink-0 rounded-lg flex items-center justify-center ${theme.bg} ${theme.text} text-xl shadow-inner">
+                            <i class="fa-solid ${article.icon}"></i>
+                        </div>
+                        <h3 class="text-xl font-bold tracking-tight text-white mt-2">${article.title}</h3>
+                        <span class="ml-auto mt-2 text-xs text-slate-500 font-mono border border-slate-700 px-2 py-1 rounded bg-[#0d1117]">${article.date}</span>
+                    </div>
+
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        ${bulletsHTML}
+                    </ul>
+
+                    <!-- Le target="_blank" est bien là, et l'URL est maintenant valide -->
+                    <a href="${article.sourceUrl}" target="_blank" rel="noopener noreferrer" class="block w-full text-center text-slate-400 py-3 px-6 border border-slate-700/60 font-medium rounded-lg hover:bg-slate-800/50 hover:text-white transition-all duration-300 mt-auto">
+                        <i class="fa-solid fa-arrow-up-right-from-square mr-2 text-xs"></i> ${article.sourceName}
+                    </a>
+                </div>
+            `;
+
+                grid.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        });
+    </script>

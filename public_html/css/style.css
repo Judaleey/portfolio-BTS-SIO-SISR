@@ -1,0 +1,171 @@
+/* RESET & FONTS */
+* {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+:root {
+    --color-primary: #2661a1;
+    --color-secondary: #18aeef;
+    --midnight: #0f172a;
+    --soft-gradient: linear-gradient(145deg, #ffffff 0%, #e1ecf4 70%, #d8e4ec 100%);
+    --dark-gradient: linear-gradient(145deg, #0f172a 0%, #1e293b 70%, #334155 100%);
+    --skill-hover: linear-gradient(90deg, #f0da18 0%, #F08C18 70%, #00ff5595 100%);
+}
+
+/* Icônes Solid / Regular / Free */
+.fa,
+.fas,
+.far,
+.fa-solid {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+}
+
+/* Icônes Brands (GitHub, LinkedIn, X, Discord, etc.) */
+.fab,
+.fa-brands {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+}
+
+
+
+/* COMPONENT STYLES */
+.card-soft-light {
+    background: var(--soft-gradient);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.card-midnight-dark {
+    background: var(--dark-gradient);
+}
+
+/* PROGRESS BAR HOVER EFFECT */
+.skill-item:hover .skill-bar {
+    background: var(--skill-hover) !important;
+    box-shadow: 0 0 15px rgba(240, 218, 24, 0.4);
+}
+
+/* SECTION TAGS */
+.section-tag {
+    background: rgba(38, 97, 161, 0.1);
+    color: var(--color-primary);
+    padding: 6px 20px;
+    border-radius: 99px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-tag-dark {
+    background: rgba(255, 255, 255, 0.05);
+    color: #18aeef;
+    padding: 6px 20px;
+    border-radius: 99px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* TYPING CURSOR */
+.typing-text::after {
+    content: "|";
+    animation: blink 0.8s infinite;
+    color: #18aeef;
+}
+
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* TABLE STYLES */
+table th {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+    .text-6xl {
+        font-size: 3rem;
+    }
+
+    .card-soft-light {
+        padding: 1.5rem;
+    }
+}
+
+img.logo {
+    width: 80px;
+    height: auto;
+}
+
+
+
+/* Effets néon sur les boutons (conservés) */
+.btn-all:hover {
+    animation: neon-pulse 1.5s infinite alternate;
+}
+
+@keyframes neon-pulse {
+    from {
+        box-shadow: 0 0 5px rgba(52, 211, 153, 0.3), 0 0 10px rgba(52, 211, 153, 0.2);
+    }
+
+    to {
+        box-shadow: 0 0 10px rgba(52, 211, 153, 0.5), 0 0 20px rgba(52, 211, 153, 0.4), 0 0 30px rgba(52, 211, 153, 0.3);
+    }
+}
+
+/* Bouton actif */
+.filter-btn.active {
+    background-color: #3b82f6;
+    color: white;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+/* Assure que la modale reste au-dessus de tout */
+#minipedia-container {
+    z-index: 1000;
+    /* Valeur très élevée */
+}
+
+/* Style pour le bouton de fermeture */
+#close-minipedia {
+    background: rgba(30, 41, 59, 0.8);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+#close-minipedia:hover {
+    background: rgba(30, 41, 59, 1);
+    transform: scale(1.1);
+}
+
+/* Classes pour l'animation */
+.opacity-0 {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.opacity-100 {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
