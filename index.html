@@ -1190,846 +1190,1035 @@
 
 
 
- <!-- SECTION : TABLEAU DE COMPÉTENCES (THÈME ÉMERAUDE ./NÉO) -->
-<section id="competences" class="py-20 bg-[#0d1117] text-white">
-    <div class="max-w-7xl mx-auto px-6">
+        <!-- SECTION : TABLEAU DE COMPÉTENCES (THÈME ÉMERAUDE ./NÉO) -->
+        <section id="competences" class="py-20 bg-[#0d1117] text-white">
+            <div class="max-w-7xl mx-auto px-6">
 
-        <!-- HEADER -->
-        <div class="text-center mb-16">
-            <span class="inline-block px-4 py-1.5 bg-emerald-500/10 text-emerald-400 text-[10px] font-mono uppercase tracking-widest rounded-full mb-4 border border-emerald-500/20">
-                EXAMEN NATIONAL - SESSION 2026
-            </span>
-            <h2 class="text-3xl font-mono text-emerald-400 uppercase">
-                <a href="./public_html/components/TableaudeSynthèse.pdf" target="_blank"
-                    title="Ouvrir le tableau de synthèse ?" class="hover:text-emerald-300 transition-colors">
-                    ./Tableau_de_Compétences
-                </a>
-            </h2>
-            <div class="text-right hidden md:block">
-                <span class="text-[10px] font-mono text-slate-500 uppercase tracking-[0.2em]">
-                    STATUS: <span class="text-emerald-500/80 underline decoration-emerald-500/30">Production_Ready</span>
-                </span>
-            </div>
-        </div>
-
-        <!-- INFOS CANDIDAT -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div class="p-6 bg-[#161b22] rounded-lg border border-slate-800 hover:border-emerald-500/30 transition-colors">
-                <p class="text-[10px] uppercase font-mono text-slate-400 mb-1">CANDIDAT</p>
-                <p class="text-lg font-bold text-white">ALEXIS Judeley</p>
-            </div>
-            <div class="p-6 bg-[#161b22] rounded-lg border border-slate-800 hover:border-emerald-500/30 transition-colors">
-                <p class="text-[10px] uppercase font-mono text-slate-400 mb-1">CENTRE DE FORMATION</p>
-                <p class="text-lg font-bold text-white">CFA UTEC - Émerainville</p>
-            </div>
-            <div class="p-6 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
-                <p class="text-[10px] uppercase font-mono text-emerald-300 mb-1">OPTION CHOISIE</p>
-                <div class="flex gap-4 mt-2">
-                    <label class="flex items-center gap-2 text-emerald-400 font-mono cursor-pointer">
-                        <input type="checkbox" checked class="accent-emerald-400">
-                        <span class="text-sm font-bold">SISR</span>
-                    </label>
-                    <label class="flex items-center gap-2 text-slate-500 font-mono opacity-50">
-                        <input type="checkbox" disabled class="accent-slate-600">
-                        <span class="text-sm">SLAM</span>
-                    </label>
+                <!-- HEADER -->
+                <div class="text-center mb-16">
+                    <span
+                        class="inline-block px-4 py-1.5 bg-emerald-500/10 text-emerald-400 text-[10px] font-mono uppercase tracking-widest rounded-full mb-4 border border-emerald-500/20">
+                        EXAMEN NATIONAL - SESSION 2026
+                    </span>
+                    <h2 class="text-3xl font-mono text-emerald-400 uppercase">
+                        <a href="./public_html/components/TableaudeSynthèse.pdf" target="_blank"
+                            title="Ouvrir le tableau de synthèse ?" class="hover:text-emerald-300 transition-colors">
+                            ./Tableau_de_Compétences
+                        </a>
+                    </h2>
+                    <div class="text-right hidden md:block">
+                        <span class="text-[10px] font-mono text-slate-500 uppercase tracking-[0.2em]">
+                            STATUS: <span
+                                class="text-emerald-500/80 underline decoration-emerald-500/30">Production_Ready</span>
+                        </span>
+                    </div>
                 </div>
+
+                <!-- INFOS CANDIDAT -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div
+                        class="p-6 bg-[#161b22] rounded-lg border border-slate-800 hover:border-emerald-500/30 transition-colors">
+                        <p class="text-[10px] uppercase font-mono text-slate-400 mb-1">CANDIDAT</p>
+                        <p class="text-lg font-bold text-white">ALEXIS Judeley</p>
+                    </div>
+                    <div
+                        class="p-6 bg-[#161b22] rounded-lg border border-slate-800 hover:border-emerald-500/30 transition-colors">
+                        <p class="text-[10px] uppercase font-mono text-slate-400 mb-1">CENTRE DE FORMATION</p>
+                        <p class="text-lg font-bold text-white">CFA UTEC - Émerainville</p>
+                    </div>
+                    <div class="p-6 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
+                        <p class="text-[10px] uppercase font-mono text-emerald-300 mb-1">OPTION CHOISIE</p>
+                        <div class="flex gap-4 mt-2">
+                            <label class="flex items-center gap-2 text-emerald-400 font-mono cursor-pointer">
+                                <input type="checkbox" checked class="accent-emerald-400">
+                                <span class="text-sm font-bold">SISR</span>
+                            </label>
+                            <label class="flex items-center gap-2 text-slate-500 font-mono opacity-50">
+                                <input type="checkbox" disabled class="accent-slate-600">
+                                <span class="text-sm">SLAM</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STYLES TOOLTIP -->
+                <style>
+                    .sk {
+                        position: relative;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: help;
+                    }
+
+                    .sk .tt {
+                        visibility: hidden;
+                        opacity: 0;
+                        pointer-events: none;
+                        position: absolute;
+                        bottom: calc(100% + 8px);
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: #0d1117;
+                        border: 1px solid rgba(16, 185, 129, 0.4);
+                        border-radius: 6px;
+                        padding: 8px 10px;
+                        min-width: 230px;
+                        max-width: 290px;
+                        z-index: 999;
+                        transition: opacity 0.15s ease;
+                        text-align: left;
+                        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+                    }
+
+                    .sk:hover .tt,
+                    .sk:focus .tt {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+
+                    .sk .tt::after {
+                        content: '';
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border: 5px solid transparent;
+                        border-top-color: rgba(16, 185, 129, 0.4);
+                    }
+
+                    .tt-h {
+                        font-size: 9px;
+                        font-family: monospace;
+                        text-transform: uppercase;
+                        letter-spacing: 0.08em;
+                        color: #34d399;
+                        margin-bottom: 5px;
+                        border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+                        padding-bottom: 4px;
+                    }
+
+                    .tt-i {
+                        font-size: 10px;
+                        font-family: monospace;
+                        color: #94a3b8;
+                        line-height: 1.5;
+                        padding: 2px 0;
+                        display: flex;
+                        gap: 5px;
+                        align-items: flex-start;
+                    }
+
+                    .tt-i::before {
+                        content: '▸';
+                        color: #10b981;
+                        flex-shrink: 0;
+                        font-size: 9px;
+                        margin-top: 1px;
+                    }
+
+                    /* Variante bleue (entreprise) */
+                    .sk.b .tt {
+                        border-color: rgba(59, 130, 246, 0.4);
+                    }
+
+                    .sk.b .tt::after {
+                        border-top-color: rgba(59, 130, 246, 0.4);
+                    }
+
+                    .sk.b .tt-h {
+                        color: #60a5fa;
+                        border-color: rgba(59, 130, 246, 0.2);
+                    }
+
+                    .sk.b .tt-i::before {
+                        color: #3b82f6;
+                    }
+
+                    /* Variante orange (année 2) */
+                    .sk.o .tt {
+                        border-color: rgba(251, 146, 60, 0.4);
+                    }
+
+                    .sk.o .tt::after {
+                        border-top-color: rgba(251, 146, 60, 0.4);
+                    }
+
+                    .sk.o .tt-h {
+                        color: #fb923c;
+                        border-color: rgba(251, 146, 60, 0.2);
+                    }
+
+                    .sk.o .tt-i::before {
+                        color: #f97316;
+                    }
+                </style>
+
+                <!-- LE TABLEAU -->
+                <div class="bg-[#161b22] rounded-xl shadow-2xl shadow-black/50 border border-slate-800 overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse text-slate-300 font-mono">
+
+                            <!-- EN-TÊTE -->
+                            <thead>
+                                <tr class="bg-[#0d1117]">
+                                    <th
+                                        class="p-5 text-left text-xs font-mono uppercase tracking-wider border-r border-slate-800 min-w-[300px]">
+                                        RÉALISATIONS PROFESSIONNELLES
+                                    </th>
+                                    <th
+                                        class="p-3 text-center text-[9px] font-mono uppercase leading-tight w-24 border-r border-slate-800">
+                                        GÉRER<br>LE PATRIMOINE</th>
+                                    <th
+                                        class="p-3 text-center text-[9px] font-mono uppercase leading-tight w-24 border-r border-slate-800">
+                                        INCIDENTS<br>&amp; DEMANDES</th>
+                                    <th
+                                        class="p-3 text-center text-[9px] font-mono uppercase leading-tight w-24 border-r border-slate-800">
+                                        PRÉSENCE<br>EN LIGNE</th>
+                                    <th
+                                        class="p-3 text-center text-[9px] font-mono uppercase leading-tight w-24 border-r border-slate-800">
+                                        MODE<br>PROJET</th>
+                                    <th
+                                        class="p-3 text-center text-[9px] font-mono uppercase leading-tight w-24 border-r border-slate-800">
+                                        MISE À<br>DISPOSITION</th>
+                                    <th
+                                        class="p-3 text-center text-[9px] font-mono uppercase leading-tight w-24 border-r border-slate-800">
+                                        DÉV. PRO<br>PERSONNEL</th>
+                                    <th class="p-5 text-center text-[9px] font-mono uppercase tracking-wider w-28">
+                                        PÉRIODE</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <!-- ═══════════════════════════════════════════════════════════ -->
+                                <!-- FORMATION                                                   -->
+                                <!-- ═══════════════════════════════════════════════════════════ -->
+                                <tr class="bg-emerald-500/5">
+                                    <td colspan="8"
+                                        class="px-6 py-3 text-[10px] font-mono text-emerald-400 uppercase tracking-widest">
+                                        RÉALISATIONS EN COURS DE FORMATION
+                                    </td>
+                                </tr>
+
+                                <!-- Veille technologique : AI & Cognition Humaine -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Veille technologique : AI &amp;
+                                        Cognition Humaine</td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Dév. pro personnel</div>
+                                                <div class="tt-i">Mettre en place son environnement d'apprentissage
+                                                    personnel</div>
+                                                <div class="tt-i">Mettre en œuvre des outils et stratégies de veille
+                                                    informationnelle</div>
+                                                <div class="tt-i">Gérer son identité professionnelle</div>
+                                                <div class="tt-i">Développer son projet professionnel</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2025 - 2026</td>
+                                </tr>
+
+                                <!-- fiche n°1 E6 : Analyse de trafic VLANs et Fortinet WAN et LAN -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">fiche n°1 E6 : Analyse de trafic
+                                        VLANs et Fortinet WAN et LAN</td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Gérer le patrimoine</div>
+                                                <div class="tt-i">Recenser et identifier les ressources numériques</div>
+                                                <div class="tt-i">Exploiter des référentiels, normes et standards
+                                                    adoptés par le prestataire</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mode projet</div>
+                                                <div class="tt-i">Analyser les objectifs et les modalités d'organisation
+                                                    d'un projet</div>
+                                                <div class="tt-i">Planifier les activités</div>
+                                                <div class="tt-i">Évaluer les indicateurs de suivi d'un projet et
+                                                    analyser les écarts</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Réaliser les tests d'intégration et d'acceptation d'un
+                                                    service</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2025 - 2026</td>
+                                </tr>
+
+                                <!-- fiche n°2 E6 : Gestion d'infrastructure par appel Wi-Fi via TP-Link -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">fiche n°2 E6 : Gestion
+                                        d'infrastructure par appel Wi-Fi via TP-Link</td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Incidents &amp; demandes</div>
+                                                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
+                                                <div class="tt-i">Traiter des demandes concernant les services réseau et
+                                                    système</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mode projet</div>
+                                                <div class="tt-i">Analyser les objectifs et les modalités d'organisation
+                                                    d'un projet</div>
+                                                <div class="tt-i">Planifier les activités</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                                <div class="tt-i">Accompagner les utilisateurs dans la mise en place
+                                                    d'un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2025 - 2026</td>
+                                </tr>
+
+                                <!-- Mise en place d'un OpenVPN -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Mise en place d'un OpenVPN</td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Gérer le patrimoine</div>
+                                                <div class="tt-i">Recenser et identifier les ressources numériques</div>
+                                                <div class="tt-i">Vérifier les conditions de la continuité d'un service
+                                                    informatique</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Réaliser les tests d'intégration et d'acceptation d'un
+                                                    service</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2026</td>
+                                </tr>
+
+                                <!-- Mise en place d'un NextCloud -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Mise en place d'un NextCloud
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Gérer le patrimoine</div>
+                                                <div class="tt-i">Recenser et identifier les ressources numériques</div>
+                                                <div class="tt-i">Gérer des sauvegardes</div>
+                                                <div class="tt-i">Vérifier les conditions de la continuité d'un service
+                                                    informatique</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                                <div class="tt-i">Accompagner les utilisateurs dans la mise en place
+                                                    d'un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2026</td>
+                                </tr>
+
+                                <!-- Documentation technique des activités réalisées -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Documentation technique des
+                                        activités réalisées</td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Dév. pro personnel</div>
+                                                <div class="tt-i">Mettre en place son environnement d'apprentissage
+                                                    personnel</div>
+                                                <div class="tt-i">Développer son projet professionnel</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2025 - 2026</td>
+                                </tr>
+
+                                <!-- TP d'installation du service DHCP -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">TP d'installation du service
+                                        DHCP</td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Incidents &amp; demandes</div>
+                                                <div class="tt-i">Traiter des demandes concernant les services réseau et
+                                                    système</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Réaliser les tests d'intégration et d'acceptation d'un
+                                                    service</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2025</td>
+                                </tr>
+
+                                <!-- TP d'installation du service DNS -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">TP d'installation du service DNS
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Incidents &amp; demandes</div>
+                                                <div class="tt-i">Traiter des demandes concernant les services réseau et
+                                                    système</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Réaliser les tests d'intégration et d'acceptation d'un
+                                                    service</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2025</td>
+                                </tr>
+
+                                <!-- E5 : Rédaction et développement du portfolio -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">E5 : Rédaction et développement
+                                        du portfolio</td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Présence en ligne</div>
+                                                <div class="tt-i">Participer à la valorisation de l'image de
+                                                    l'organisation sur les médias numériques</div>
+                                                <div class="tt-i">Participer à l'évolution d'un site Web exploitant les
+                                                    données de l'organisation</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk" tabindex="0">
+                                            <i class="fa-solid fa-check text-emerald-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Dév. pro personnel</div>
+                                                <div class="tt-i">Gérer son identité professionnelle</div>
+                                                <div class="tt-i">Développer son projet professionnel</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2026</td>
+                                </tr>
+
+
+                                <!-- ═══════════════════════════════════════════════════════════ -->
+                                <!-- MILIEU PROFESSIONNEL ANNÉE 1                               -->
+                                <!-- ═══════════════════════════════════════════════════════════ -->
+                                <tr class="bg-blue-500/5">
+                                    <td colspan="8"
+                                        class="px-6 py-3 text-[10px] font-mono text-blue-400 uppercase tracking-widest">
+                                        RÉALISATIONS EN MILIEU PROFESSIONNEL — PREMIÈRE ANNÉE
+                                    </td>
+                                </tr>
+
+                                <!-- Installation de Livebox Orange -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Installation de Livebox Orange
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Gérer le patrimoine</div>
+                                                <div class="tt-i">Recenser et identifier les ressources numériques</div>
+                                                <div class="tt-i">Exploiter des référentiels, normes et standards
+                                                    adoptés par le prestataire</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Incidents &amp; demandes</div>
+                                                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
+                                                <div class="tt-i">Traiter des demandes concernant les services réseau et
+                                                    système</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                                <div class="tt-i">Accompagner les utilisateurs dans la mise en place
+                                                    d'un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2025</td>
+                                </tr>
+
+                                <!-- Installation et paramétrage de répéteur Wi-Fi -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Installation et paramétrage de
+                                        répéteur Wi-Fi</td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Gérer le patrimoine</div>
+                                                <div class="tt-i">Recenser et identifier les ressources numériques</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Incidents &amp; demandes</div>
+                                                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
+                                                <div class="tt-i">Traiter des demandes concernant les services réseau et
+                                                    système</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                                <div class="tt-i">Accompagner les utilisateurs dans la mise en place
+                                                    d'un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2025</td>
+                                </tr>
+
+                                <!-- Dépannage et rétablissement de matériels Orange -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Dépannage et rétablissement de
+                                        matériels Orange</td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Incidents &amp; demandes</div>
+                                                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
+                                                <div class="tt-i">Traiter des demandes concernant les services réseau et
+                                                    système</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                                <div class="tt-i">Accompagner les utilisateurs dans la mise en place
+                                                    d'un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2025</td>
+                                </tr>
+
+                                <!-- Dépannage et rétablissement de liens fibre-optique -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Dépannage et rétablissement de
+                                        liens fibre-optique</td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Incidents &amp; demandes</div>
+                                                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
+                                                <div class="tt-i">Traiter des demandes concernant les services réseau et
+                                                    système</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2025</td>
+                                </tr>
+
+                                <!-- Dépannage et rétablissement collectifs de liens fibre-optique -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Dépannage et rétablissement
+                                        collectifs de liens fibre-optique</td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Incidents &amp; demandes</div>
+                                                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
+                                                <div class="tt-i">Traiter des demandes concernant les services réseau et
+                                                    système</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mode projet</div>
+                                                <div class="tt-i">Analyser les objectifs et les modalités d'organisation
+                                                    d'un projet</div>
+                                                <div class="tt-i">Planifier les activités</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                                <div class="tt-i">Accompagner les utilisateurs dans la mise en place
+                                                    d'un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2024</td>
+                                </tr>
+
+                                <!-- Brassage de jarretières et tests de réflectométrie fibre-optique -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Brassage de jarretières et tests
+                                        de réflectométrie fibre-optique</td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Gérer le patrimoine</div>
+                                                <div class="tt-i">Recenser et identifier les ressources numériques</div>
+                                                <div class="tt-i">Exploiter des référentiels, normes et standards
+                                                    adoptés par le prestataire</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2025</td>
+                                </tr>
+
+                                <!-- Déploiement d'infrastructure FTTH -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Déploiement d'infrastructure
+                                        FTTH</td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Incidents &amp; demandes</div>
+                                                <div class="tt-i">Traiter des demandes concernant les services réseau et
+                                                    système</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk b" tabindex="0">
+                                            <i class="fa-solid fa-check text-blue-400"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mode projet</div>
+                                                <div class="tt-i">Analyser les objectifs et les modalités d'organisation
+                                                    d'un projet</div>
+                                                <div class="tt-i">Planifier les activités</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2025</td>
+                                </tr>
+
+
+                                <!-- ═══════════════════════════════════════════════════════════ -->
+                                <!-- MILIEU PROFESSIONNEL ANNÉE 2                               -->
+                                <!-- ═══════════════════════════════════════════════════════════ -->
+                                <tr class="bg-blue-500/5">
+                                    <td colspan="8"
+                                        class="px-6 py-3 text-[10px] font-mono text-secondary uppercase tracking-widest">
+                                        RÉALISATIONS EN MILIEU PROFESSIONNEL — SECONDE ANNÉE
+                                    </td>
+                                </tr>
+
+                                <!-- Installation de postes téléphonique offre connect pro VOIP B2B -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Installation de postes
+                                        téléphonique offre connect pro VOIP B2B</td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Gérer le patrimoine</div>
+                                                <div class="tt-i">Recenser et identifier les ressources numériques</div>
+                                                <div class="tt-i">Exploiter des référentiels, normes et standards
+                                                    adoptés par le prestataire</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Incidents &amp; demandes</div>
+                                                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
+                                                <div class="tt-i">Traiter des demandes concernant les services réseau et
+                                                    système</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                                <div class="tt-i">Accompagner les utilisateurs dans la mise en place
+                                                    d'un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2025 - 2026</td>
+                                </tr>
+
+                                <!-- Installation de routeurs B2B -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Installation de routeurs B2B
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Gérer le patrimoine</div>
+                                                <div class="tt-i">Recenser et identifier les ressources numériques</div>
+                                                <div class="tt-i">Exploiter des référentiels, normes et standards
+                                                    adoptés par le prestataire</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Incidents &amp; demandes</div>
+                                                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
+                                                <div class="tt-i">Traiter des demandes concernant les services réseau et
+                                                    système</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                                <div class="tt-i">Accompagner les utilisateurs dans la mise en place
+                                                    d'un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2026</td>
+                                </tr>
+
+                                <!-- Mise en place d'un Cisco Meraki -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Mise en place d'un Cisco Meraki
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Gérer le patrimoine</div>
+                                                <div class="tt-i">Recenser et identifier les ressources numériques</div>
+                                                <div class="tt-i">Exploiter des référentiels, normes et standards
+                                                    adoptés par le prestataire</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Réaliser les tests d'intégration et d'acceptation d'un
+                                                    service</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">20/03/2026</td>
+                                </tr>
+
+                                <!-- Mise en place d'outils d'amélioration pour l'équipe -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Mise en place d'outils
+                                        d'amélioration pour l'équipe</td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Incidents &amp; demandes</div>
+                                                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
+                                                <div class="tt-i">Traiter des demandes concernant les services réseau et
+                                                    système</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mode projet</div>
+                                                <div class="tt-i">Analyser les objectifs et les modalités d'organisation
+                                                    d'un projet</div>
+                                                <div class="tt-i">Planifier les activités</div>
+                                                <div class="tt-i">Évaluer les indicateurs de suivi d'un projet et
+                                                    analyser les écarts</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Dév. pro personnel</div>
+                                                <div class="tt-i">Mettre en œuvre des outils et stratégies de veille
+                                                    informationnelle</div>
+                                                <div class="tt-i">Développer son projet professionnel</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2025</td>
+                                </tr>
+
+                                <!-- Soudure fibre-optique -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Soudure fibre-optique</td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Incidents &amp; demandes</div>
+                                                <div class="tt-i">Traiter des demandes concernant les services réseau et
+                                                    système</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Mise à disposition</div>
+                                                <div class="tt-i">Déployer un service</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">2025 - 2026</td>
+                                </tr>
+
+                                <!-- Déploiement d'infrastructure Duplex -->
+                                <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                                    <td class="p-5 text-sm font-mono text-white italic">Déploiement d'infrastructure
+                                        Duplex</td>
+                                    <td class="p-3 text-center">
+                                        <span class="sk o" tabindex="0">
+                                            <i class="fa-solid fa-check text-secondary"></i>
+                                            <span class="tt">
+                                                <div class="tt-h">Gérer le patrimoine</div>
+                                                <div class="tt-i">Recenser et identifier les ressources numériques</div>
+                                                <div class="tt-i">Exploiter des référentiels, normes et standards
+                                                    adoptés par le prestataire</div>
+                                                <div class="tt-i">Vérifier les conditions de la continuité d'un service
+                                                    informatique</div>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-3 text-center"></td>
+                                    <td class="p-5 text-center text-xs font-mono text-slate-400">16/03/2026</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- LÉGENDE -->
+                <div
+                    class="mt-8 flex flex-wrap gap-6 justify-center items-center text-[10px] font-mono uppercase text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 bg-emerald-500 rounded-sm"></span>
+                        <span class="text-emerald-400">Formation</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 bg-blue-500 rounded-sm"></span>
+                        <span class="text-blue-400">Entreprise — Année 1</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 bg-secondary rounded-sm"></span>
+                        <span class="text-secondary">Entreprise — Année 2</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-circle-info text-emerald-400"></i>
+                        <span>Conforme au référentiel BTS SIO</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-slate-500">
+                        <i class="fa-regular fa-hand-pointer"></i>
+                        <span>Survoler un ✓ pour afficher les sous-compétences</span>
+                    </div>
+                </div>
+
             </div>
-        </div>
-
-        <!-- STYLES TOOLTIP -->
-        <style>
-        .sk {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            cursor: help;
-        }
-        .sk .tt {
-            visibility: hidden;
-            opacity: 0;
-            pointer-events: none;
-            position: absolute;
-            bottom: calc(100% + 8px);
-            left: 50%;
-            transform: translateX(-50%);
-            background: #0d1117;
-            border: 1px solid rgba(16,185,129,0.4);
-            border-radius: 6px;
-            padding: 8px 10px;
-            min-width: 230px;
-            max-width: 290px;
-            z-index: 999;
-            transition: opacity 0.15s ease;
-            text-align: left;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.7);
-        }
-        .sk:hover .tt, .sk:focus .tt { visibility: visible; opacity: 1; }
-        .sk .tt::after {
-            content: '';
-            position: absolute;
-            top: 100%; left: 50%;
-            transform: translateX(-50%);
-            border: 5px solid transparent;
-            border-top-color: rgba(16,185,129,0.4);
-        }
-        .tt-h {
-            font-size: 9px; font-family: monospace;
-            text-transform: uppercase; letter-spacing: 0.08em;
-            color: #34d399; margin-bottom: 5px;
-            border-bottom: 1px solid rgba(16,185,129,0.2);
-            padding-bottom: 4px;
-        }
-        .tt-i {
-            font-size: 10px; font-family: monospace;
-            color: #94a3b8; line-height: 1.5;
-            padding: 2px 0;
-            display: flex; gap: 5px; align-items: flex-start;
-        }
-        .tt-i::before { content: '▸'; color: #10b981; flex-shrink: 0; font-size: 9px; margin-top: 1px; }
-        /* Variante bleue (entreprise) */
-        .sk.b .tt { border-color: rgba(59,130,246,0.4); }
-        .sk.b .tt::after { border-top-color: rgba(59,130,246,0.4); }
-        .sk.b .tt-h { color: #60a5fa; border-color: rgba(59,130,246,0.2); }
-        .sk.b .tt-i::before { color: #3b82f6; }
-        /* Variante orange (année 2) */
-        .sk.o .tt { border-color: rgba(251,146,60,0.4); }
-        .sk.o .tt::after { border-top-color: rgba(251,146,60,0.4); }
-        .sk.o .tt-h { color: #fb923c; border-color: rgba(251,146,60,0.2); }
-        .sk.o .tt-i::before { color: #f97316; }
-        </style>
-
-        <!-- LE TABLEAU -->
-        <div class="bg-[#161b22] rounded-xl shadow-2xl shadow-black/50 border border-slate-800 overflow-hidden">
-            <div class="overflow-x-auto">
-                <table class="w-full border-collapse text-slate-300 font-mono">
-
-                    <!-- EN-TÊTE -->
-                    <thead>
-                        <tr class="bg-[#0d1117]">
-                            <th class="p-5 text-left text-xs font-mono uppercase tracking-wider border-r border-slate-800 min-w-[300px]">
-                                RÉALISATIONS PROFESSIONNELLES
-                            </th>
-                            <th class="p-3 text-center text-[9px] font-mono uppercase leading-tight w-24 border-r border-slate-800">GÉRER<br>LE PATRIMOINE</th>
-                            <th class="p-3 text-center text-[9px] font-mono uppercase leading-tight w-24 border-r border-slate-800">INCIDENTS<br>&amp; DEMANDES</th>
-                            <th class="p-3 text-center text-[9px] font-mono uppercase leading-tight w-24 border-r border-slate-800">PRÉSENCE<br>EN LIGNE</th>
-                            <th class="p-3 text-center text-[9px] font-mono uppercase leading-tight w-24 border-r border-slate-800">MODE<br>PROJET</th>
-                            <th class="p-3 text-center text-[9px] font-mono uppercase leading-tight w-24 border-r border-slate-800">MISE À<br>DISPOSITION</th>
-                            <th class="p-3 text-center text-[9px] font-mono uppercase leading-tight w-24 border-r border-slate-800">DÉV. PRO<br>PERSONNEL</th>
-                            <th class="p-5 text-center text-[9px] font-mono uppercase tracking-wider w-28">PÉRIODE</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- FORMATION                                                   -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-<tr class="bg-emerald-500/5">
-    <td colspan="8" class="px-6 py-3 text-[10px] font-mono text-emerald-400 uppercase tracking-widest">
-        RÉALISATIONS EN COURS DE FORMATION
-    </td>
-</tr>
-
-<!-- Veille technologique : AI & Cognition Humaine -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Veille technologique : AI &amp; Cognition Humaine</td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Dév. pro personnel</div>
-                <div class="tt-i">Mettre en place son environnement d'apprentissage personnel</div>
-                <div class="tt-i">Mettre en œuvre des outils et stratégies de veille informationnelle</div>
-                <div class="tt-i">Gérer son identité professionnelle</div>
-                <div class="tt-i">Développer son projet professionnel</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2025 - 2026</td>
-</tr>
-
-<!-- fiche n°1 E6 : Analyse de trafic VLANs et Fortinet WAN et LAN -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">fiche n°1 E6 : Analyse de trafic VLANs et Fortinet WAN et LAN</td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Gérer le patrimoine</div>
-                <div class="tt-i">Recenser et identifier les ressources numériques</div>
-                <div class="tt-i">Exploiter des référentiels, normes et standards adoptés par le prestataire</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Mode projet</div>
-                <div class="tt-i">Analyser les objectifs et les modalités d'organisation d'un projet</div>
-                <div class="tt-i">Planifier les activités</div>
-                <div class="tt-i">Évaluer les indicateurs de suivi d'un projet et analyser les écarts</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Réaliser les tests d'intégration et d'acceptation d'un service</div>
-                <div class="tt-i">Déployer un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2025 - 2026</td>
-</tr>
-
-<!-- fiche n°2 E6 : Gestion d'infrastructure par appel Wi-Fi via TP-Link -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">fiche n°2 E6 : Gestion d'infrastructure par appel Wi-Fi via TP-Link</td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Incidents &amp; demandes</div>
-                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
-                <div class="tt-i">Traiter des demandes concernant les services réseau et système</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Mode projet</div>
-                <div class="tt-i">Analyser les objectifs et les modalités d'organisation d'un projet</div>
-                <div class="tt-i">Planifier les activités</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Déployer un service</div>
-                <div class="tt-i">Accompagner les utilisateurs dans la mise en place d'un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2025 - 2026</td>
-</tr>
-
-<!-- Mise en place d'un OpenVPN -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Mise en place d'un OpenVPN</td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Gérer le patrimoine</div>
-                <div class="tt-i">Recenser et identifier les ressources numériques</div>
-                <div class="tt-i">Vérifier les conditions de la continuité d'un service informatique</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Réaliser les tests d'intégration et d'acceptation d'un service</div>
-                <div class="tt-i">Déployer un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2026</td>
-</tr>
-
-<!-- Mise en place d'un NextCloud -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Mise en place d'un NextCloud</td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Gérer le patrimoine</div>
-                <div class="tt-i">Recenser et identifier les ressources numériques</div>
-                <div class="tt-i">Gérer des sauvegardes</div>
-                <div class="tt-i">Vérifier les conditions de la continuité d'un service informatique</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Déployer un service</div>
-                <div class="tt-i">Accompagner les utilisateurs dans la mise en place d'un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2026</td>
-</tr>
-
-<!-- Documentation technique des activités réalisées -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Documentation technique des activités réalisées</td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Dév. pro personnel</div>
-                <div class="tt-i">Mettre en place son environnement d'apprentissage personnel</div>
-                <div class="tt-i">Développer son projet professionnel</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2025 - 2026</td>
-</tr>
-
-<!-- TP d'installation du service DHCP -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">TP d'installation du service DHCP</td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Incidents &amp; demandes</div>
-                <div class="tt-i">Traiter des demandes concernant les services réseau et système</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Réaliser les tests d'intégration et d'acceptation d'un service</div>
-                <div class="tt-i">Déployer un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2025</td>
-</tr>
-
-<!-- TP d'installation du service DNS -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">TP d'installation du service DNS</td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Incidents &amp; demandes</div>
-                <div class="tt-i">Traiter des demandes concernant les services réseau et système</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Réaliser les tests d'intégration et d'acceptation d'un service</div>
-                <div class="tt-i">Déployer un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2025</td>
-</tr>
-
-<!-- E5 : Rédaction et développement du portfolio -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">E5 : Rédaction et développement du portfolio</td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Présence en ligne</div>
-                <div class="tt-i">Participer à la valorisation de l'image de l'organisation sur les médias numériques</div>
-                <div class="tt-i">Participer à l'évolution d'un site Web exploitant les données de l'organisation</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk" tabindex="0">
-            <i class="fa-solid fa-check text-emerald-400"></i>
-            <span class="tt"><div class="tt-h">Dév. pro personnel</div>
-                <div class="tt-i">Gérer son identité professionnelle</div>
-                <div class="tt-i">Développer son projet professionnel</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2026</td>
-</tr>
-
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- MILIEU PROFESSIONNEL ANNÉE 1                               -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-<tr class="bg-blue-500/5">
-    <td colspan="8" class="px-6 py-3 text-[10px] font-mono text-blue-400 uppercase tracking-widest">
-        RÉALISATIONS EN MILIEU PROFESSIONNEL — PREMIÈRE ANNÉE
-    </td>
-</tr>
-
-<!-- Installation de Livebox Orange -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Installation de Livebox Orange</td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Gérer le patrimoine</div>
-                <div class="tt-i">Recenser et identifier les ressources numériques</div>
-                <div class="tt-i">Exploiter des référentiels, normes et standards adoptés par le prestataire</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Incidents &amp; demandes</div>
-                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
-                <div class="tt-i">Traiter des demandes concernant les services réseau et système</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Déployer un service</div>
-                <div class="tt-i">Accompagner les utilisateurs dans la mise en place d'un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2025</td>
-</tr>
-
-<!-- Installation et paramétrage de répéteur Wi-Fi -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Installation et paramétrage de répéteur Wi-Fi</td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Gérer le patrimoine</div>
-                <div class="tt-i">Recenser et identifier les ressources numériques</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Incidents &amp; demandes</div>
-                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
-                <div class="tt-i">Traiter des demandes concernant les services réseau et système</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Déployer un service</div>
-                <div class="tt-i">Accompagner les utilisateurs dans la mise en place d'un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2025</td>
-</tr>
-
-<!-- Dépannage et rétablissement de matériels Orange -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Dépannage et rétablissement de matériels Orange</td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Incidents &amp; demandes</div>
-                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
-                <div class="tt-i">Traiter des demandes concernant les services réseau et système</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Déployer un service</div>
-                <div class="tt-i">Accompagner les utilisateurs dans la mise en place d'un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2025</td>
-</tr>
-
-<!-- Dépannage et rétablissement de liens fibre-optique -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Dépannage et rétablissement de liens fibre-optique</td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Incidents &amp; demandes</div>
-                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
-                <div class="tt-i">Traiter des demandes concernant les services réseau et système</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Déployer un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2025</td>
-</tr>
-
-<!-- Dépannage et rétablissement collectifs de liens fibre-optique -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Dépannage et rétablissement collectifs de liens fibre-optique</td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Incidents &amp; demandes</div>
-                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
-                <div class="tt-i">Traiter des demandes concernant les services réseau et système</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Mode projet</div>
-                <div class="tt-i">Analyser les objectifs et les modalités d'organisation d'un projet</div>
-                <div class="tt-i">Planifier les activités</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Déployer un service</div>
-                <div class="tt-i">Accompagner les utilisateurs dans la mise en place d'un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2024</td>
-</tr>
-
-<!-- Brassage de jarretières et tests de réflectométrie fibre-optique -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Brassage de jarretières et tests de réflectométrie fibre-optique</td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Gérer le patrimoine</div>
-                <div class="tt-i">Recenser et identifier les ressources numériques</div>
-                <div class="tt-i">Exploiter des référentiels, normes et standards adoptés par le prestataire</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2025</td>
-</tr>
-
-<!-- Déploiement d'infrastructure FTTH -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Déploiement d'infrastructure FTTH</td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Incidents &amp; demandes</div>
-                <div class="tt-i">Traiter des demandes concernant les services réseau et système</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk b" tabindex="0">
-            <i class="fa-solid fa-check text-blue-400"></i>
-            <span class="tt"><div class="tt-h">Mode projet</div>
-                <div class="tt-i">Analyser les objectifs et les modalités d'organisation d'un projet</div>
-                <div class="tt-i">Planifier les activités</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2024 - 2025</td>
-</tr>
-
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- MILIEU PROFESSIONNEL ANNÉE 2                               -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-<tr class="bg-blue-500/5">
-    <td colspan="8" class="px-6 py-3 text-[10px] font-mono text-secondary uppercase tracking-widest">
-        RÉALISATIONS EN MILIEU PROFESSIONNEL — SECONDE ANNÉE
-    </td>
-</tr>
-
-<!-- Installation de postes téléphonique offre connect pro VOIP B2B -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Installation de postes téléphonique offre connect pro VOIP B2B</td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Gérer le patrimoine</div>
-                <div class="tt-i">Recenser et identifier les ressources numériques</div>
-                <div class="tt-i">Exploiter des référentiels, normes et standards adoptés par le prestataire</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Incidents &amp; demandes</div>
-                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
-                <div class="tt-i">Traiter des demandes concernant les services réseau et système</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Déployer un service</div>
-                <div class="tt-i">Accompagner les utilisateurs dans la mise en place d'un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2025 - 2026</td>
-</tr>
-
-<!-- Installation de routeurs B2B -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Installation de routeurs B2B</td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Gérer le patrimoine</div>
-                <div class="tt-i">Recenser et identifier les ressources numériques</div>
-                <div class="tt-i">Exploiter des référentiels, normes et standards adoptés par le prestataire</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Incidents &amp; demandes</div>
-                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
-                <div class="tt-i">Traiter des demandes concernant les services réseau et système</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Déployer un service</div>
-                <div class="tt-i">Accompagner les utilisateurs dans la mise en place d'un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2026</td>
-</tr>
-
-<!-- Mise en place d'un Cisco Meraki -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Mise en place d'un Cisco Meraki</td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Gérer le patrimoine</div>
-                <div class="tt-i">Recenser et identifier les ressources numériques</div>
-                <div class="tt-i">Exploiter des référentiels, normes et standards adoptés par le prestataire</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Réaliser les tests d'intégration et d'acceptation d'un service</div>
-                <div class="tt-i">Déployer un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">20/03/2026</td>
-</tr>
-
-<!-- Mise en place d'outils d'amélioration pour l'équipe -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Mise en place d'outils d'amélioration pour l'équipe</td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Incidents &amp; demandes</div>
-                <div class="tt-i">Collecter, suivre et orienter des demandes</div>
-                <div class="tt-i">Traiter des demandes concernant les services réseau et système</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Mode projet</div>
-                <div class="tt-i">Analyser les objectifs et les modalités d'organisation d'un projet</div>
-                <div class="tt-i">Planifier les activités</div>
-                <div class="tt-i">Évaluer les indicateurs de suivi d'un projet et analyser les écarts</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Dév. pro personnel</div>
-                <div class="tt-i">Mettre en œuvre des outils et stratégies de veille informationnelle</div>
-                <div class="tt-i">Développer son projet professionnel</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2025</td>
-</tr>
-
-<!-- Soudure fibre-optique -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Soudure fibre-optique</td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Incidents &amp; demandes</div>
-                <div class="tt-i">Traiter des demandes concernant les services réseau et système</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Mise à disposition</div>
-                <div class="tt-i">Déployer un service</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">2025 - 2026</td>
-</tr>
-
-<!-- Déploiement d'infrastructure Duplex -->
-<tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-    <td class="p-5 text-sm font-mono text-white italic">Déploiement d'infrastructure Duplex</td>
-    <td class="p-3 text-center">
-        <span class="sk o" tabindex="0">
-            <i class="fa-solid fa-check text-secondary"></i>
-            <span class="tt"><div class="tt-h">Gérer le patrimoine</div>
-                <div class="tt-i">Recenser et identifier les ressources numériques</div>
-                <div class="tt-i">Exploiter des référentiels, normes et standards adoptés par le prestataire</div>
-                <div class="tt-i">Vérifier les conditions de la continuité d'un service informatique</div>
-            </span>
-        </span>
-    </td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-3 text-center"></td>
-    <td class="p-5 text-center text-xs font-mono text-slate-400">16/03/2026</td>
-</tr>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- LÉGENDE -->
-        <div class="mt-8 flex flex-wrap gap-6 justify-center items-center text-[10px] font-mono uppercase text-slate-400">
-            <div class="flex items-center gap-2">
-                <span class="w-3 h-3 bg-emerald-500 rounded-sm"></span>
-                <span class="text-emerald-400">Formation</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <span class="w-3 h-3 bg-blue-500 rounded-sm"></span>
-                <span class="text-blue-400">Entreprise — Année 1</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <span class="w-3 h-3 bg-secondary rounded-sm"></span>
-                <span class="text-secondary">Entreprise — Année 2</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <i class="fa-solid fa-circle-info text-emerald-400"></i>
-                <span>Conforme au référentiel BTS SIO</span>
-            </div>
-            <div class="flex items-center gap-2 text-slate-500">
-                <i class="fa-regular fa-hand-pointer"></i>
-                <span>Survoler un ✓ pour afficher les sous-compétences</span>
-            </div>
-        </div>
-
-    </div>
-</section>
+        </section>
 
 
         <!-- ══════════════════════════════════════════════════════════ -->
@@ -2729,30 +2918,6 @@
                     </div>
 
 
-                    <div class="activity-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100"
-                        data-category="ftth" data-article="ftth_e005">
-                        <div class="h-48 bg-slate-200 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent z-10"></div>
-                            <img src="./public_html/components/img/E0018" alt="Fiber"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <span
-                                class="absolute top-4 left-4 z-20 badge-entreprise text-white text-[10px] font-bold px-3 py-1 rounded-md uppercase">Entreprise</span>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold text-slate-800 mb-2">Déploiement Colonne Montante</h4>
-                            <p class="text-slate-500 text-sm mb-4 line-clamp-3">Soudure de fibre optique et raccordement
-                                client en zone RIP. Mesures de photométrie et validation de lien.</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-xs font-mono text-slate-400">#Soudure #Réflectométrie</span>
-                                <button
-                                    class="open-activity-modal text-blue-600 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
-                                    data-article="ftth_e005">Détails <i class="fa-solid fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-
-
                 </div><!-- /grid -->
             </div>
         </article>
@@ -2846,7 +3011,7 @@
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                                 <polyline points="14 2 14 8 20 8" />
                             </svg>
-                            Documents &amp; Livrables
+                            Documents
                         </h3>
                         <div style="display:flex;flex-direction:column;gap:8px;" id="act-modal-docs"></div>
                     </div>
@@ -2871,16 +3036,17 @@
                    ──────────────────────────────────────────────────────────── */
                 const ACTIVITIES = {
 
-                    /* ── Carte f001 FTTH── */
+                    /* ── Carte f001 FTTH ── */
                     f001: {
-                        title: "Application de Gestion d'Inventaire",
-                        banner: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+                        title: "Administration des systèmes et des réseaux",
+                        banner: "./public_html/components/img/f005.jpg",
                         chips: [
                             { label: "Formation", cls: "chip-green" },
-                            { label: "FTTH", cls: "chip-gray" },
-                            { label: "01/24 – 03/24", cls: "chip-gray" }
+                            { label: "réseau", cls: "chip-gray" },
+                            { label: "09/25 – 04/26", cls: "chip-gray" }
                         ],
-                        mission: "Conception et développement d'une application web full-stack permettant le suivi en temps réel des équipements réseaux d'une infrastructure IT. L'objectif était d'automatiser la gestion du parc matériel, de réduire les erreurs de saisie manuelle et de produire des rapports CSV exportables.",
+                        mission: "Déploiement d'une infrascture réseau",
+
                         skills: [
                             { label: "Gérer le patrimoine informatique", cls: "" },
                             { label: "Recenser les ressources numériques", cls: "" },
@@ -2890,36 +3056,32 @@
                             { label: "Dév. professionnel personnel", cls: "blue" }
                         ],
                         timeline: [
-                            { date: "Phase 1 — Janv. 2024", title: "Analyse des besoins", content: "Recueil des exigences, modélisation MCD, choix de la stack technique (Python Flask + MySQL + HTML/CSS)." },
-                            { date: "Phase 2 — Févr. 2024", title: "Développement", content: "Implémentation des modules CRUD, gestion des rôles utilisateurs, interface de visualisation d'inventaire." },
-                            { date: "Phase 3 — Mars 2024", title: "Tests & déploiement", content: "Tests d'intégration, correction de bugs, déploiement sur serveur local Apache. Documentation technique rédigée." }
+                            { date: "Phase 1 — Mars. 2025", title: "Analyse des besoins", content: "Surveiller la pertinence du firewalling configurer." },
+                            { date: "Phase 2 — Mars. 2025", title: "Développement", content: "Configuration du VLAN et du port mirroring." },
+                            { date: "Phase 3 — Avril 2025", title: "Tests & déploiement", content: "Tests d'intégration, correction de bugs, Documentation technique rédigée." }
                         ],
                         gallery: [
-                            { src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c", label: "Interface dashboard" },
-                            { src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6", label: "Extrait code Python" },
-                            { src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085", label: "Schéma BDD" }
+                            { src: "./public_html/components/img/f009.jpg", label: "Baie D" },
+                            { src: "./public_html/components/img/f008.png", label: "PROXMOX" },
                         ],
                         docs: [
-                            { label: "Cahier des charges (PDF)", href: "#" },
-                            { label: "Rapport de projet (PDF)", href: "#" },
-                            { label: "Code source — GitHub", href: "https://github.com/" }
+                            { label: "Cahier des charges (PDF)", href: "./public_html/components/BaieD.pdf" },
+
                         ],
-                        actions: [
-                            { label: "Voir le dépôt GitHub", href: "https://github.com/", primary: true },
-                            { label: "Télécharger le rapport", href: "#", primary: false }
-                        ]
                     },
+
 
                     /* ── Carte f002 FTTH ── */
                     f002: {
-                        title: "Application de Gestion d'Inventaire",
-                        banner: "./public_html/components/img/f002",
+                        title: "Fiche n°1 E6 : Analyse de trafic VLANs et Fortinet WAN et LAN",
+                        banner: "./public_html/components/img/f010.jpg",
                         chips: [
                             { label: "Formation", cls: "chip-green" },
-                            { label: "Programmation", cls: "chip-gray" },
-                            { label: "01/24 – 03/24", cls: "chip-gray" }
+                            { label: "réseau", cls: "chip-gray" },
+                            { label: "03/26 – 04/26", cls: "chip-gray" }
                         ],
-                        mission: "Conception et développement d'une application web full-stack permettant le suivi en temps réel des équipements réseaux d'une infrastructure IT. L'objectif était d'automatiser la gestion du parc matériel, de réduire les erreurs de saisie manuelle et de produire des rapports CSV exportables.",
+                        mission: "L'infrastructure réseau de la Baie D est opérationnelle et s'appuie sur un pare-feu FortiGate pour réguler les flux inter-VLAN. Bien que le service soit en apparence stable, la sécurité réelle de cette architecture dépend de la stricte application de la matrice de flux. Pour valider cette configuration, un environnement de supervision passif (VLAN 444 dédié à Wireshark) a été déployé. Il repose sur une capture par port mirroring(SPAN) directement sur l'équipement cœur de réseau (SW-L3-BTS)",
+
                         skills: [
                             { label: "Gérer le patrimoine informatique", cls: "" },
                             { label: "Recenser les ressources numériques", cls: "" },
@@ -2929,23 +3091,22 @@
                             { label: "Dév. professionnel personnel", cls: "blue" }
                         ],
                         timeline: [
-                            { date: "Phase 1 — Janv. 2024", title: "Analyse des besoins", content: "Recueil des exigences, modélisation MCD, choix de la stack technique (Python Flask + MySQL + HTML/CSS)." },
-                            { date: "Phase 2 — Févr. 2024", title: "Développement", content: "Implémentation des modules CRUD, gestion des rôles utilisateurs, interface de visualisation d'inventaire." },
-                            { date: "Phase 3 — Mars 2024", title: "Tests & déploiement", content: "Tests d'intégration, correction de bugs, déploiement sur serveur local Apache. Documentation technique rédigée." }
+                            { date: "Phase 1 — Mars. 2025", title: "Analyse des besoins", content: "Surveiller la pertinence du firewalling configurer." },
+                            { date: "Phase 2 — Mars. 2025", title: "Développement", content: "Configuration du VLAN et du port mirroring." },
+                            { date: "Phase 3 — Avril 2025", title: "Tests & déploiement", content: "Tests d'intégration, correction de bugs, Documentation technique rédigée." }
                         ],
                         gallery: [
-                            { src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c", label: "Interface dashboard" },
-                            { src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6", label: "Extrait code Python" },
-                            { src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085", label: "Schéma BDD" }
+                            { src: "./public_html/components/img/f002.jpg", label: "SWITCH" },
+                            { src: "./public_html/components/img/f008.png", label: "PROXMOX" },
+                            { src: "./public_html/components/img/f007.png", label: "FORTINET" }
                         ],
                         docs: [
-                            { label: "Cahier des charges (PDF)", href: "#" },
-                            { label: "Rapport de projet (PDF)", href: "#" },
-                            { label: "Code source — GitHub", href: "https://github.com/" }
+                            { label: "Cahier des charges (PDF)", href: "./public_html/components/Alexis description_realisation_Wireshark.pdf" },
+
                         ],
                         actions: [
-                            { label: "Voir le dépôt GitHub", href: "https://github.com/", primary: true },
-                            { label: "Télécharger le rapport", href: "#", primary: false }
+                            { label: "Voir le dépôt GitHub", href: "https://github.com/Judaleey/portfolio-BTS-SIO-SISR", primary: true },
+                            { label: "Télécharger le rapport", href: "./public_html/components/Alexis description_realisation_Wireshark.pdf", primary: false }
                         ]
                     },
 
@@ -3182,11 +3343,11 @@
                                     class="fa-solid fa-check text-emerald-500 text-xs"></i> Fiches d'activités validées
                             </li>
                         </ul>
-                        <button
-                            class="open-minipedia block w-full text-center py-3 px-6 bg-white text-black font-bold rounded-lg hover:bg-emerald-400 transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50"
-                            data-minipedia-id="E5" aria-label="Ouvrir le dépôt E5 - Accéder au dépôt GitHub">
-                            Accéder au dépôt GitHub
-                        </button>
+
+                        <a href=""
+                            class="block w-full text-center py-3 px-6 bg-white text-black font-bold rounded-lg hover:bg-emerald-400 transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50">Accéder
+                            au dépôt GitHub</a>
+
 
 
                     </div>
@@ -3210,13 +3371,16 @@
                             <li class="flex items-center gap-2"><i
                                     class="fa-solid fa-chevron-right text-blue-500 text-xs"></i> Rapport d'analyse</li>
                         </ul>
-                        <button
-                            class="open-minipedia block w-full text-center text-slate-400 py-3 px-6 border border-slate-700 font-bold rounded hover:bg-slate-800/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-opacity-50"
+
+                        <a href="./public_html/components/BaieD.pdf"
+                            class="block w-full text-center text-slate-400 py-3 px-6 border border-slate-700 font-bold rounded hover:bg-slate-800/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-opacity-50"
                             data-minipedia-id="E6" aria-label="Ouvrir E6 - Consulter le dossier">
                             <span class="flex items-center justify-center gap-2">
                                 Consulter le dossier
                             </span>
-                        </button>
+                        </a>
+
+
 
                     </div>
                 </div>
@@ -3225,64 +3389,56 @@
         <!-- Fin de la section épreuves -->
 
 
-        <!-- SECTION X : Introduction à la VEILLE TECHNOLOGIQUE -->
 
 
         <!-- SECTION : INTRODUCTION VEILLE TECHNOLOGIQUE -->
-        <article class="bg-[#0d1117] py-24 border-t border-slate-800" id="veille-intro">
+        <article class="content-section py-20 bg-dark-bg" id="veille">
             <div class="max-w-[1200px] mx-auto px-6">
 
-                <!-- HEADER STYLE TERMINAL -->
-                <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-slate-800 pb-8">
-                    <div>
-                        <h2 class="text-3xl font-mono text-violet-400">./Comprendre_la_Veille</h2>
-                        <p class="text-slate-400 mt-2">Définition, méthodes et enjeux — avant d'entrer dans le vif du
-                            sujet.</p>
-                    </div>
-                    <div class="text-right hidden md:block">
-                        <span class="text-[10px] font-mono text-slate-500 uppercase tracking-[0.2em]">
-                            STATUS: <span
-                                class="text-violet-500/80 underline decoration-violet-500/30">Contextualisation</span>
-                        </span>
-                    </div>
+                <!-- Header -->
+                <div class="section-header mb-12 text-center">
+                    <h2 class="text-4xl font-extrabold text-secondary mt-4">Veille Technologique</h2>
+                    <div class="h-1 w-20 bg-secondary mx-auto mt-4 rounded-full"></div>
                 </div>
+
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <!-- BLOC 1 : QU'EST-CE QUE LA VEILLE TECHNOLOGIQUE -->
                     <div
-                        class="bg-[#161b22] border border-slate-800 p-8 rounded-lg hover:border-violet-500/50 transition-colors group">
+                        class="bg-white border border-slate-800 p-8 rounded-lg hover:border-violet-500/50 transition-colors group">
                         <div class="flex items-center gap-4 mb-6">
                             <div
-                                class="w-12 h-12 rounded bg-violet-500/10 flex items-center justify-center text-violet-400 border border-violet-500/20 text-xl">
+                                class="w-12 h-12 rounded bg-blue-500/10 flex items-center justify-center text-blue-500 border border-blue-500/20 text-xl">
                                 <i class="fa-solid fa-satellite-dish"></i>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold tracking-tight text-white uppercase">Veille Technologique
+                                <h3 class="text-xl font-bold tracking-tight text-slate-600 uppercase">Veille
+                                    Technologique
                                 </h3>
-                                <span class="text-[10px] text-violet-500 font-mono tracking-widest">Définition
+                                <span class="text-[10px] text-blue-400 font-mono tracking-widest">Définition
                                     générale</span>
                             </div>
                         </div>
 
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
                             La veille technologique est un processus continu de collecte, d'analyse et d'exploitation
                             d'informations sur les évolutions techniques d'un domaine. Son objectif : anticiper les
                             mutations, identifier les signaux faibles et rester en capacité de décision éclairée dans un
                             environnement qui change plus vite que notre capacité à le comprendre.
                         </p>
 
-                        <ul class="space-y-3 text-slate-400 text-sm font-mono">
+                        <ul class="space-y-3 text-slate-600 text-sm font-mono">
                             <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-chevron-right text-violet-500 text-[10px]"></i>
+                                <i class="fa-solid fa-chevron-right text-blue-500 text-[10px]"></i>
                                 Surveiller les innovations et ruptures technologiques
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-chevron-right text-violet-500 text-[10px]"></i>
+                                <i class="fa-solid fa-chevron-right text-blue-500 text-[10px]"></i>
                                 Identifier les tendances avant qu'elles deviennent mainstream
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-chevron-right text-violet-500 text-[10px]"></i>
+                                <i class="fa-solid fa-chevron-right text-blue-500 text-[10px]"></i>
                                 Construire une opinion critique fondée sur des sources fiables
                             </li>
                         </ul>
@@ -3290,15 +3446,16 @@
 
                     <!-- BLOC 2 : PASSIVE VS ACTIVE -->
                     <div
-                        class="bg-[#161b22] border border-slate-800 p-8 rounded-lg hover:border-fuchsia-500/50 transition-colors group">
+                        class="bg-white border border-slate-800 p-8 rounded-lg hover:border-blue-500/50 transition-colors group">
                         <div class="flex items-center gap-4 mb-6">
                             <div
-                                class="w-12 h-12 rounded bg-fuchsia-500/10 flex items-center justify-center text-fuchsia-400 border border-fuchsia-500/20 text-xl">
-                                <i class="fa-solid fa-code-compare"></i>
+                                class="w-12 h-12 rounded bg-blue-400/10 flex items-center justify-center text-fuchsia-400 border border-blue-400/20 text-xl">
+                                <i class="fa-solid fa-code-compare text-blue-500"></i>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold tracking-tight text-white uppercase">Passive vs Active</h3>
-                                <span class="text-[10px] text-fuchsia-500 font-mono tracking-widest">Deux modes
+                                <h3 class="text-xl font-bold tracking-tight text-slate-600 uppercase">Passive vs Active
+                                </h3>
+                                <span class="text-[10px] text-blue-400 font-mono tracking-widest">Deux modes
                                     distincts</span>
                             </div>
                         </div>
@@ -3311,8 +3468,8 @@
                         <div class="grid grid-cols-2 gap-4 text-sm font-mono">
                             <!-- Passive -->
                             <div class="border border-slate-700 rounded p-4">
-                                <p class="text-slate-300 font-bold mb-3 flex items-center gap-2">
-                                    <i class="fa-solid fa-eye-slash text-slate-500 text-xs"></i> Passive
+                                <p class="text-slate-600 font-bold mb-3 flex items-center gap-2">
+                                    <i class="fa-solid fa-eye-slash text-slate-600 text-xs"></i> Passive
                                 </p>
                                 <ul class="space-y-2 text-slate-500 text-xs">
                                     <li class="flex items-start gap-2">
@@ -3330,24 +3487,24 @@
                                 </ul>
                             </div>
                             <!-- Active -->
-                            <div class="border border-fuchsia-500/30 bg-fuchsia-500/5 rounded p-4">
-                                <p class="text-fuchsia-300 font-bold mb-3 flex items-center gap-2">
-                                    <i class="fa-solid fa-crosshairs text-fuchsia-400 text-xs"></i> Active
+                            <div class="border border-primtext-blue-500/30 bg-primtext-blue-500/5 rounded p-4">
+                                <p class="text-blue-500 font-bold mb-3 flex items-center gap-2">
+                                    <i class="fa-solid fa-crosshairs text-blue-500 text-xs"></i> Active
                                 </p>
-                                <ul class="space-y-2 text-slate-400 text-xs">
+                                <ul class="space-y-2 text-slate-600 text-xs">
                                     <li class="flex items-start gap-2">
                                         <i
-                                            class="fa-solid fa-chevron-right text-fuchsia-500 text-[8px] mt-1 flex-shrink-0"></i>
+                                            class="fa-solid fa-chevron-right text-blue-500 text-[8px] mt-1 flex-shrink-0"></i>
                                         Sources sélectionnées, revues scientifiques, études
                                     </li>
                                     <li class="flex items-start gap-2">
                                         <i
-                                            class="fa-solid fa-chevron-right text-fuchsia-500 text-[8px] mt-1 flex-shrink-0"></i>
+                                            class="fa-solid fa-chevron-right text-blue-500 text-[8px] mt-1 flex-shrink-0"></i>
                                         Analyse critique et mise en perspective
                                     </li>
                                     <li class="flex items-start gap-2">
                                         <i
-                                            class="fa-solid fa-chevron-right text-fuchsia-500 text-[8px] mt-1 flex-shrink-0"></i>
+                                            class="fa-solid fa-chevron-right text-blue-500 text-[8px] mt-1 flex-shrink-0"></i>
                                         Production d'un point de vue argumenté
                                     </li>
                                 </ul>
@@ -3442,14 +3599,14 @@
                 <!-- HEADER STYLE TERMINAL -->
                 <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-slate-800 pb-8">
                     <div>
-                        <h2 class="text-3xl font-mono text-cyan-400">./Veille_Technologique</h2>
+                        <h2 class="text-3xl font-mono text-cyan-400">./IA & Cognition Humaine</h2>
                         <p class="text-slate-400 mt-2">L'entropie du système humain face à l'hyper-accélération
                             matérielle et l'automatisation de la pensée.</p>
                     </div>
                     <div class="text-right hidden md:block">
                         <span class="text-[10px] font-mono text-slate-500 uppercase tracking-[0.2em]">
                             STATUS: <span
-                                class="text-cyan-500/80 underline decoration-cyan-500/30">Monitoring_Active</span>
+                                class="text-cyan-500/80 underline decoration-cyan-500/30">Production_Ready</span>
                         </span>
                     </div>
                 </div>
@@ -3466,6 +3623,7 @@
                             "L'IA ne va pas nous remplacer dans nos emplois — elle va nous remplacer dans l'effort. Et
                             c'est bien plus dangereux."
                         </p>
+
                         <div class="flex items-center gap-3 mt-3">
                             <span class="text-[10px] font-mono text-yellow-500/70 uppercase tracking-widest">Source
                                 :</span>
@@ -3473,6 +3631,30 @@
                                 class="text-xs font-mono text-yellow-400/80 hover:text-yellow-300 transition-colors underline decoration-yellow-500/30">
                                 Micode — "La Fabrique à Idiots" (Underscore_, jan. 2026, 38 min)
                             </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CITATION Léo Duff — BANNIÈRE ÉDITORIALE -->
+                <div
+                    class="mb-8 border border-yellow-500/20 bg-yellow-500/5 rounded-lg p-6 flex flex-col md:flex-row gap-4 items-start">
+                    <div
+                        class="flex-shrink-0 w-10 h-10 rounded bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center">
+                        <i class="fa-brands fa-youtube text-yellow-400 text-sm"></i>
+                    </div>
+                    <div>
+                        <p class="text-slate-300 text-sm font-mono leading-relaxed italic">
+                            "Chaque requête que nous envoyons aux data centers dessine une ligne invisible dans nos
+                            réserves d’eau. L’intelligence artificielle n’est pas immatérielle : elle a soif. "
+                        </p>
+                        <span class="text-[10px] font-mono text-yellow-500/70 uppercase tracking-widest">Source
+                            :</span>
+                        <a href="https://www.youtube.com/watch?v=4xq6bVbS-Pw" target="_blank"
+                            class="text-xs font-mono text-yellow-400/80 hover:text-yellow-300 transition-colors underline decoration-yellow-500/30">
+                            Léo Duff — " Comment ChatGPT assoiffe cette population. " (1 juin. 2026, 10 min)
+                        </a>
+                        <div><img src="./public_html/components/img/Welcom_to_ChatGPT.png" alt="ChatGPT"
+                                class="w-90 h-auto rounded rounded-lg pr-5 m-5 opacity-70 grayscale hover:grayscale-0 transition-all">
                         </div>
                     </div>
                 </div>
@@ -3488,6 +3670,8 @@
                                 <i class="fa-solid fa-network-wired text-lg"></i>
                             </div>
                             <h3 class="text-xl font-bold tracking-tight">Hyper-connectivité & FOMO</h3>
+                            <span class="text-[10px] font-mono text-cyan-500/60 uppercase tracking-widest">30 Nov.
+                                2023 - Nict</span>
                         </div>
 
                         <div class="mb-6 rounded overflow-hidden border border-slate-700">
@@ -3534,6 +3718,8 @@
                                 <i class="fa-solid fa-brain text-lg"></i>
                             </div>
                             <h3 class="text-xl font-bold tracking-tight">Cognitive Offloading</h3>
+                            <span class="text-[10px] font-mono text-yellow-500/60 uppercase tracking-widest"> 10
+                                Sep. 2025 - MDPI</span>
                         </div>
 
                         <div class="mb-6 rounded overflow-hidden border border-slate-700">
@@ -3581,8 +3767,9 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold tracking-tight">La Fabrique à Idiots</h3>
-                                <span class="text-[10px] font-mono text-yellow-500/60 uppercase tracking-widest">Micode
-                                    / Underscore_ — Jan. 2026</span>
+                                <span class="text-[10px] font-mono text-yellow-500/60 uppercase tracking-widest">Jan.
+                                    2026 - Micode
+                                    / Underscore_</span>
                             </div>
                         </div>
 
@@ -3669,12 +3856,13 @@
                                 <i class="fa-solid fa-droplet text-lg"></i>
                             </div>
                             <h3 class="text-xl font-bold tracking-tight">Le paradoxe matériel : La soif des serveurs
-                            </h3>
+                            </h3><span class="text-[10px] font-mono text-emerald-500/60 uppercase tracking-widest">03
+                                Sep. 2025 - ScienceAltert - EN</span>
                         </div>
 
                         <div class="flex flex-col md:flex-row gap-6">
                             <div class="w-full md:w-1/3 rounded overflow-hidden border border-slate-700">
-                                <img src="https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=600&h=400"
+                                <img src="https://www.sciencealert.com/images/2025/09/thirsty_AI_header.jpg"
                                     alt="Data center refroidissement"
                                     class="w-full h-full object-cover opacity-70 grayscale hover:grayscale-0 transition-all">
                             </div>
@@ -3703,6 +3891,7 @@
                                             invisible, et personne ne la compte dans ses émissions personnelles.</span>
                                     </li>
                                 </ul>
+
                                 <a href="https://www.sciencealert.com/ai-chugs-a-bottle-of-water-every-time-you-chat-with-it"
                                     target="_blank"
                                     class="block w-full text-center text-slate-900 py-3 px-6 bg-slate-200 font-bold rounded hover:bg-emerald-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500">
@@ -3723,6 +3912,8 @@
                                 <i class="fa-solid fa-heart-pulse text-lg"></i>
                             </div>
                             <h3 class="text-xl font-bold tracking-tight">Névrose Numérique & Parasocial</h3>
+                            <span class="text-[10px] font-mono text-purple-500/60 uppercase tracking-widest">Dec. 2025
+                                — arXiv</span>
                         </div>
 
                         <ul class="space-y-3 mb-6 text-slate-400 text-sm font-mono flex-grow">
@@ -3760,9 +3951,11 @@
                         <div class="flex items-center gap-4 mb-6">
                             <div
                                 class="w-12 h-12 rounded bg-rose-500/10 flex items-center justify-center text-rose-400 border border-rose-500/20">
-                                <i class="fa-solid fa-chart-line-down text-lg"></i>
+                                <i class="fa-solid fa-chart-line text-lg"></i>
                             </div>
                             <h3 class="text-xl font-bold tracking-tight">La Chute du QI Fonctionnel</h3>
+                            <span class="text-[10px] font-mono text-red-500/60 uppercase tracking-widest">Avr. 2026
+                                — MIT</span><i class="fa-solid fa-eye-slash text-slate-600 text-xs"></i>
                         </div>
 
                         <ul class="space-y-3 mb-6 text-slate-400 text-sm font-mono flex-grow">
@@ -3786,10 +3979,11 @@
                             </li>
                         </ul>
 
-                        <a href="https://www.mdpi.com/2075-4698/15/1/6" target="_blank"
+                        <a href="https://syft.ai/fr/detail/6945900097-7439181856ed4b83beb0aa060a64bd1c?smod=structured"
+                            target="_blank"
                             class="block w-full text-center text-slate-400 py-3 px-6 border border-slate-700 font-bold rounded hover:bg-slate-800/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-slate-500">
                             <span class="flex items-center justify-center gap-2 text-sm">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> MDPI — Cognitive decline study
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> MIT — Cognitive decline
                             </span>
                         </a>
                     </div>
@@ -3802,7 +3996,9 @@
                                 class="w-12 h-12 rounded bg-amber-500/10 flex items-center justify-center text-amber-400 border border-amber-500/20">
                                 <i class="fa-solid fa-infinity text-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold tracking-tight">Paralysie par Sur-information</h3>
+                            <h3 class="text-xl font-bold tracking-tight">Paralysie par Sur-information</h3><span
+                                class="text-[10px] font-mono text-amber-500/60 uppercase tracking-widest">Avr. 2026
+                                — Clubic</span><i class="fa-solid fa-eye-slash text-slate-600 text-xs"></i>
                         </div>
 
                         <ul class="space-y-3 mb-6 text-slate-400 text-sm font-mono flex-grow">
@@ -3826,7 +4022,7 @@
                             </li>
                         </ul>
 
-                        <a href="https://theconversation.com/information-overload-why-it-is-damaging-your-brain-and-what-to-do-about-it-227016"
+                        <a href="https://syft.ai/detail/3280000097-d1bef4b9d0ea4dbf90e19148d32e24ca?smod=structured&si=5147366187-Agw&setup=get-app&ref=evoke&scene=app_share"
                             target="_blank"
                             class="block w-full text-center text-slate-400 py-3 px-6 border border-slate-700 font-bold rounded hover:bg-slate-800/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-slate-500">
                             <span class="flex items-center justify-center gap-2 text-sm">
@@ -3843,7 +4039,9 @@
                                 class="w-12 h-12 rounded bg-sky-500/10 flex items-center justify-center text-sky-400 border border-sky-500/20">
                                 <i class="fa-solid fa-location-dot text-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold tracking-tight">GPS & Atrophie Hippocampique</h3>
+                            <h3 class="text-xl font-bold tracking-tight">GPS & Atrophie Hippocampique</h3><span
+                                class="text-[10px] font-mono text-sky-500/60 uppercase tracking-widest">Oct. 2025
+                                — LNS</span>
                         </div>
 
                         <ul class="space-y-3 mb-6 text-slate-400 text-sm font-mono flex-grow">
@@ -3940,9 +4138,8 @@
                         <!-- Citation terminale -->
                         <div class="mt-8 pt-6 border-t border-slate-700/50">
                             <p class="text-center font-mono text-xs text-slate-500 italic tracking-wide">
-                                <span class="text-cyan-500/60">// </span>
-                                "We are outsourcing not just our tasks, but our thinking — and with it, the very
-                                capacity to think."
+                                "Nous externalisons non seulement nos tâches, mais aussi notre réflexion — et, par là
+                                même, notre capacité même à réfléchir."
                                 <span class="text-slate-600 ml-2">— Nicholas Carr, The Shallows</span>
                             </p>
                         </div>
@@ -3956,34 +4153,47 @@
                                 class="w-12 h-12 rounded bg-pink-500/10 flex items-center justify-center text-pink-400 border border-pink-500/20">
                                 <i class="fa-solid fa-bell text-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold tracking-tight">Design Persuasif & Addiction</h3>
+                            <h3 class="text-xl font-bold tracking-tight">Alterte en Cybersécurité</h3><span
+                                class="text-[10px] font-mono text-pink-500/60 uppercase tracking-widest">Avr. 2026
+                                — AirXiv</span><i class="fa-solid fa-eye-slash text-slate-600 text-xs"></i>
                         </div>
 
                         <ul class="space-y-3 mb-6 text-slate-400 text-sm font-mono flex-grow">
                             <li class="flex items-start gap-2">
                                 <i class="fa-solid fa-chevron-right text-pink-500 text-xs mt-1 flex-shrink-0"></i>
-                                <span><strong class="text-slate-200">Variable reward loop :</strong> Notifications,
-                                    likes, réponses — le même mécanisme que les machines à sous. Conçu par des
-                                    ingénieurs qui refusent que leurs enfants utilisent ces plateformes.</span>
+                                <span>
+                                    <strong class="text-slate-200">Détection :</strong>
+                                    L’IA identifie en millisecondes des anomalies qu’un analyste humain mettrait des
+                                    heures à repérer — un avantage confirmé par les dernières études AirXiv.
+                                </span>
                             </li>
+
                             <li class="flex items-start gap-2">
                                 <i class="fa-solid fa-chevron-right text-pink-500 text-xs mt-1 flex-shrink-0"></i>
-                                <span><strong class="text-slate-200">Dopamine économisée :</strong> Le cerveau alloue
-                                    moins de ressources à la curiosité naturelle quand la gratification est instantanée
-                                    et garantie — l'effort de l'apprentissage devient insupportable.</span>
+                                <span>
+                                    <strong class="text-slate-200">Réaction :</strong>
+                                    Automatisation, priorisation, réponse immédiate — l’IA réduit drastiquement le temps
+                                    entre l’attaque et la contre‑mesure, un facteur critique en cybersécurité moderne.
+                                </span>
                             </li>
+
                             <li class="flex items-start gap-2">
                                 <i class="fa-solid fa-chevron-right text-pink-500 text-xs mt-1 flex-shrink-0"></i>
-                                <span><strong class="text-slate-200">Dark patterns :</strong> Ce n'est pas un accident
-                                    de conception — c'est la fonctionnalité principale. L'attention est le produit. Toi,
-                                    tu es la ressource.</span>
+                                <span>
+                                    <strong class="text-slate-200">Résilience :</strong>
+                                    Plus la menace évolue, plus l’IA apprend. Elle transforme la défense numérique en un
+                                    système adaptatif, proactif et continuellement renforcé.
+                                </span>
                             </li>
                         </ul>
 
-                        <a href="https://www.humanetech.com/insights" target="_blank"
+
+                        <a href="https://syft.ai/detail/3409600097-c44f04c453ad43a79b7b0f3a1e0fd0b2?smod=narrative&si=5147366187-Agw&setup=get-app&ref=evoke&scene=app_share"
+                            target="_blank"
                             class="block w-full text-center text-slate-400 py-3 px-6 border border-slate-700 font-bold rounded hover:bg-slate-800/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-slate-500">
                             <span class="flex items-center justify-center gap-2 text-sm">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Center for Humane Technology
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Assistant d'automatisation en
+                                cybersécurité
                             </span>
                         </a>
                     </div>
@@ -3996,7 +4206,9 @@
                                 class="w-12 h-12 rounded bg-indigo-500/10 flex items-center justify-center text-indigo-400 border border-indigo-500/20">
                                 <i class="fa-solid fa-palette text-lg"></i>
                             </div>
-                            <h3 class="text-xl font-bold tracking-tight">IA & Appauvrissement Créatif</h3>
+                            <h3 class="text-xl font-bold tracking-tight">IA & Appauvrissement Créatif</h3><span
+                                class="text-[10px] font-mono text-indigo-500/60 uppercase tracking-widest">Avr. 2024
+                                — AirXiv</span>
                         </div>
 
                         <ul class="space-y-3 mb-6 text-slate-400 text-sm font-mono flex-grow">
@@ -4032,41 +4244,132 @@
 
                 </div>
 
-                <!-- FOOTER TERMINAL -->
+                <!-- FOOTER VEILLE TECH -->
                 <div
                     class="mt-12 pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-[10px] font-mono text-slate-600 uppercase tracking-[0.2em]">
-                        <span class="text-cyan-500/40">$ </span>monitoring --sources=12 --status=ongoing
+                    <p class="text-[12px] font-mono text-slate-600 text-right">
+                        Articles total : 13 articles.
                     </p>
-                    <p class="text-[10px] font-mono text-slate-600 text-right">
-                        Sources : NICT · MDPI · MIT · ArXiv · ScienceAlert · The Conversation · Les Numériques ·
-                        Micode/Underscore_
+                    <p class="text-[12px] font-mono text-slate-600 text-right">
+                        Outils utilisées : Reedit et Syft.
+                    </p>
+                    <p class="text-[12px] font-mono text-slate-600 text-right">
+                        Sources : YouTube · NICT · MDPI · MIT · ArXiv · ScienceAlert · The Conversation · Les Numériques
+                        ·
+                        Micode/Underscore_ · Clubic.
                     </p>
                 </div>
 
-            </div>
+                <!-- BLOC : SYNTHÈSE & CONCLUSION VEILLE -->
+                <div class="md:col-span-2 bg-[#161b22] border border-slate-700 p-8 rounded-lg relative overflow-hidden">
+
+
+                    <!-- Header -->
+                    <div class="flex items-center gap-4 mb-8">
+                        <div
+                            class="w-12 h-12 rounded bg-slate-500/10 flex items-center justify-center text-slate-300 border border-slate-500/20 text-xl flex-shrink-0">
+                            <i class="fa-solid fa-terminal"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold tracking-tight text-white uppercase">Synthèse & Conclusion</h3>
+                            <span class="text-[10px] text-slate-500 font-mono tracking-widest">Retour d'expérience — 8
+                                mois de veille active</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-8 mb-8">
+
+                        <!-- Colonne gauche : retour d'expérience -->
+                        <div class="w-full md:w-1/2 flex flex-col gap-6">
+
+                            <!-- Expérience personnelle -->
+                            <div class="border-l-2 border-slate-600 pl-5">
+                                <p class="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-2">Retour
+                                    d'expérience</p>
+                                <p class="text-slate-400 text-sm leading-relaxed mt-3">
+                                    Ce travail m'a appris quelque chose que les LLMs ne peuvent pas enseigner : <span
+                                        class="text-white font-semibold">la valeur de l'inconfort intellectuel</span>.
+                                    Chercher, douter, structurer sans filet — c'est précisément ce que cette veille
+                                    questionne, et ce qu'elle m'a paradoxalement forcé à pratiquer.
+                                </p>
+                            </div>
+
+                            <!-- Remerciements -->
+                            <div class="border border-slate-700/50 bg-slate-800/20 rounded p-5">
+                                <p class="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">
+                                    <i class="fa-solid fa-hand-wave text-slate-400 mr-2"></i>Remerciements
+                                </p>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Merci à vous qui avez lu, écouté ou traversé ce contenu jusqu'ici. Ce n'est pas un
+                                    sujet facile à porter — ni à recevoir. Il bouscule des habitudes, interroge des
+                                    conforts. Si une seule idée vous reste, que ce soit celle-ci : <span
+                                        class="text-slate-200 italic">la question n'est pas de savoir si l'IA est bonne
+                                        ou mauvaise — elle est de savoir qui vous êtes quand vous l'utilisez.</span>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- Colonne droite : conclusion -->
+                        <div class="w-full md:w-1/2 flex flex-col gap-4">
+
+                            <!-- Triple métaphore -->
+                            <p class="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-1">Conclusion
+                            </p>
+
+                            <div class="flex items-start gap-3 border border-amber-500/20 bg-amber-500/5 rounded p-4">
+                                <div
+                                    class="w-8 h-8 rounded bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-place-of-worship text-amber-400 text-xs"></i>
+                                </div>
+                                <p class="text-slate-400 text-xs font-mono leading-relaxed">
+                                    <span class="text-amber-300 font-bold block mb-1">Comme une religion mal pratiquée
+                                    </span>
+                                    L'IA offre un cadre, une puissance, une promesse. Mais sans discernement, sans recul
+                                    critique, elle devient dogme. On croit ce qu'elle dit. On s'y soumet. L'outil prend
+                                    la place du sens.
+                                </p>
+                            </div>
+
+                            <div class="flex items-start gap-3 border border-rose-500/20 bg-red-500/5 rounded p-4">
+                                <div
+                                    class="w-8 h-8 rounded bg-rose-500/10 border border-rose-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-shield-halved text-rose-400 text-xs"></i>
+                                </div>
+                                <p class="text-slate-400 text-xs font-mono leading-relaxed">
+                                    <span class="text-rose-300 font-bold block mb-1">Comme une arme en cyberguerre
+                                    </span>
+                                    Entre de mauvaises mains, les LLMs sont des vecteurs de désinformation, de
+                                    manipulation de masse, d'érosion du réel. La frontière entre l'outil et l'arme n'est
+                                    pas technique — elle est humaine.
+                                </p>
+                            </div>
+
+                            <div class="flex items-start gap-3 border border-cyan-500/20 bg-cyan-500/5 rounded p-4">
+                                <div
+                                    class="w-8 h-8 rounded bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-user text-cyan-400 text-xs"></i>
+                                </div>
+                                <p class="text-slate-400 text-xs font-mono leading-relaxed">
+                                    <span class="text-cyan-300 font-bold block mb-1">La variable critique : l'humain
+                                    </span>
+                                    La personne la plus importante dans cette équation n'est ni le modèle, ni
+                                    l'algorithme, ni l'infrastructure. C'est celle qui est entre le clavier et la
+                                    machine. Sa conscience, sa curiosité, son sens critique — voilà ce qui détermine si
+                                    l'IA construit ou détruit.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
         </article>
         <!-- Fin de veille manuelle -->
 
 
 
-        <!-- CONTENEUR DE LA VEILLE PASSIVE -->
-        <section class="py-20 bg-[#0d1117] border-t border-slate-800">
-            <div class="max-w-[1200px] mx-auto px-6">
-
-                <div class="mb-12">
-                    <h2 class="text-3xl font-mono text-cyan-400">./Flux_Veille_Passive</h2>
-                    <p class="text-slate-400 mt-2">Données capturées et injectées dynamiquement depuis l'API de veille.
-                    </p>
-                </div>
-
-                <!-- C'est ici que le JavaScript va injecter les articles -->
-                <div id="veille-passive-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Les cartes apparaîtront ici -->
-                </div>
-
-            </div>
-        </section>
 
 
 
@@ -4140,8 +4443,8 @@
     </footer>
 
     <script src="./public_html/js/main.js"></script>
-    <script src="./public_html/js/minipedia.js" defer></script>
-    <script>// 6. 
+
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
             // L'Observateur : Il surveille le défilement de la page
             const observer = new IntersectionObserver((entries) => {
@@ -4174,125 +4477,6 @@
     </button>
     <!--  -->
 
-    <!-- Modale MiniPedia -->
-    <div id="minipedia-container"
-        class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4 pt-20 backdrop-blur-sm">
-        <div
-            class="bg-gray-900/80 text-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative border border-cyan-500/30 shadow-2xl shadow-cyan-500/10">
-
-            <!-- Bannière avec effet "circuit imprimé" -->
-            <div id="minipedia-banner"
-                class="h-48 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-cover bg-center relative overflow-hidden border-b border-cyan-500/20">
-                <!-- Effet de grille technique -->
-                <div class="absolute inset-0 opacity-10">
-                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="cyan" stroke-width="0.5"
-                                    opacity="0.3" />
-                            </pattern>
-                        </defs>
-                        <rect width="100%" height="100%" fill="url(#grid)" />
-                    </svg>
-                </div>
-                <!-- Contenu de la bannière -->
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col items-center justify-center px-4">
-                    <h2 id="minipedia-title"
-                        class="text-3xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-blue-400 drop-shadow-lg">
-                    </h2>
-                    <div class="mt-2 h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
-                </div>
-            </div>
-
-            <!-- Conteneur principal avec effet de "carte mère" -->
-            <div class="p-6 space-y-6 relative">
-                <!-- Métadonnées avec style "étiquette réseau" -->
-                <div
-                    class="flex flex-wrap justify-between gap-2 text-xs text-gray-400 border-b border-gray-700/50 pb-3">
-                    <span id="minipedia-projet"
-                        class="px-3 py-1 bg-gray-800/50 rounded-full border border-cyan-500/20"></span>
-                    <span id="minipedia-equipe"
-                        class="px-3 py-1 bg-gray-800/50 rounded-full border border-cyan-500/20"></span>
-                    <span id="minipedia-duree"
-                        class="px-3 py-1 bg-gray-800/50 rounded-full border border-cyan-500/20"></span>
-                </div>
-
-                <!-- Section Contexte avec effet "terminal" -->
-                <div class="space-y-4">
-                    <h3 class="text-xl font-semibold text-cyan-400 border-b border-cyan-500/30 pb-2 flex items-center">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
-                            </path>
-                        </svg>
-                        Contexte
-                    </h3>
-                    <div id="minipedia-mission" class="space-y-3 text-gray-300 leading-relaxed"></div>
-                    <div id="minipedia-objectifs"
-                        class="mt-4 p-4 bg-gray-800/30 rounded-lg border-l-4 border-cyan-500/50"></div>
-                </div>
-
-                <!-- Corpus Chronologique avec style "timeline réseau" -->
-                <div>
-                    <h3 class="text-xl font-semibold text-cyan-400 border-b border-cyan-500/30 pb-2 flex items-center">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                        Corpus Chronologique
-                    </h3>
-                    <div id="minipedia-timeline" class="space-y-6 mt-4">
-                        <!-- Chaque élément de timeline sera injecté ici avec ce style :
-                    <div class="relative pl-6 pt-2 border-l-2 border-cyan-500/30">
-                        <div class="absolute -left-3.5 w-7 h-7 bg-gray-800 border-2 border-cyan-500 rounded-full"></div>
-                        <h4 class="text-lg font-medium text-cyan-300">[Titre]</h4>
-                        <p class="text-gray-300 mt-1">[Description]</p>
-                        <span class="text-xs text-gray-500">[Date]</span>
-                    </div>
-                    -->
-                    </div>
-                </div>
-
-                <!-- Boutons d'action avec effet "bouton de panneau de contrôle" -->
-                <div id="minipedia-actions"
-                    class="pt-6 border-t border-gray-700/50 flex flex-wrap justify-center gap-4">
-                    <!-- Les boutons seront injectés ici avec ce style :
-                <button class="px-6 py-2 bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-500 hover:to-cyan-600 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-cyan-500/30 transform hover:-translate-y-0.5">
-                    [Texte du bouton]
-                </button>
-                -->
-                </div>
-            </div>
-
-            <!-- Bouton de fermeture avec effet "LED" -->
-            <button id="close-minipedia"
-                class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl transition-all duration-300 hover:rotate-90 hover:text-cyan-400 group">
-                <div class="relative">
-                    <span
-                        class="absolute -inset-1 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    &times;
-                </div>
-            </button>
-
-            <!-- Effet de bordure dynamique -->
-            <div class="absolute inset-0 pointer-events-none rounded-xl overflow-hidden">
-                <div class="absolute -top-1 -left-1 w-20 h-20 border-t-2 border-l-2 border-cyan-500/30 rounded-tl-xl">
-                </div>
-                <div class="absolute -top-1 -right-1 w-20 h-20 border-t-2 border-r-2 border-cyan-500/30 rounded-tr-xl">
-                </div>
-                <div
-                    class="absolute -bottom-1 -left-1 w-20 h-20 border-b-2 border-l-2 border-cyan-500/30 rounded-bl-xl">
-                </div>
-                <div
-                    class="absolute -bottom-1 -right-1 w-20 h-20 border-b-2 border-r-2 border-cyan-500/30 rounded-br-xl">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modale MiniPedia -->
-    <!--  -->
 
 </body>
 
